@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './App.css';
 import Page from './Page'
 import Navbar from './components/Navbar'
@@ -10,14 +10,8 @@ import Event from './Event'
 import Home from './Home'
 
 function App() {
-  // const [apiResponse, setApiResponse] = useState('')
   const [page, setPage] = useState('home')
 
-  // function callAPI() {
-  //   fetch("http://localhost:9000/testAPI")
-  //     .then(res => res.text())
-  //     .then(res => setApiResponse(res))
-  // }
 
   const handleScroll = event => {
     console.log('scrollTop: ', event.currentTarget.scrollTop);
@@ -33,10 +27,6 @@ function App() {
     { label: 'Adab', value: 'adab', icon: mdiTextBoxOutline },
     { label: 'Penutup', value: 'penutup', icon: mdiLogoutVariant },
   ]
-
-  // useEffect(() => {
-  //   callAPI();
-  // })
 
   return (
     <div className="App">
