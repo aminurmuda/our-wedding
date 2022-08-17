@@ -1,9 +1,17 @@
 import { useState, useEffect } from 'react'
 import './App.css';
+import Page from './Page'
+import Navbar from './components/Navbar'
+import Fullscreen from './components/Fullscreen'
+import { mdiHomeVariantOutline, mdiMapMarkerOutline, mdiHeartMultipleOutline, mdiCalendarOutline, mdiTextBoxOutline, mdiLogoutVariant } from '@mdi/js';
+import Location from './Location'
+import Pengantin from './Pengantin'
+import Event from './Event'
+import Home from './Home'
 
 function App() {
   const [apiResponse, setApiResponse] = useState('')
-  const [page, setPage] = useState('Home')
+  const [page, setPage] = useState('home')
 
   function callAPI() {
     fetch("http://localhost:9000/testAPI")
@@ -11,71 +19,37 @@ function App() {
       .then(res => setApiResponse(res))
   }
 
-  // const list = ['Home', 'Pengantin', 'Acara']
+  const handleScroll = event => {
+    console.log('scrollTop: ', event.currentTarget.scrollTop);
+    console.log('offsetHeight: ', event.currentTarget.offsetHeight);
+  };
 
-  const goToPage = (index) => {
-    setPage(index)
-    document.querySelector(`#page-${index}`).scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
+
+  const list = [
+    { label: 'Home', value: 'home', icon: mdiHomeVariantOutline, content: <Home /> },
+    { label: 'Pengantin', value: 'pengantin', icon: mdiHeartMultipleOutline, content: <Pengantin /> },
+    { label: 'Acara', value: 'acara', icon: mdiCalendarOutline, content: <Event /> },
+    { label: 'Lokasi', value: 'lokasi', icon: mdiMapMarkerOutline, content: <Location /> },
+    { label: 'Adab', value: 'adab', icon: mdiTextBoxOutline },
+    { label: 'Penutup', value: 'penutup', icon: mdiLogoutVariant },
+  ]
 
   useEffect(() => {
     callAPI();
   })
 
-  const isActive = (item) => {
-    return item === page
-  }
-
-  const NavbarItem = (props) => {
-    return (
-      <div className={`navbar-item ${isActive(props.item) ? 'is-active' : ''}`} onClick={() => { goToPage(props.item) }}>{props.item}</div>
-    )
-  }
-
-
-  const Floating = () => {
-    return (
-      <div className="float">
-        <p>Current Page: {page}</p>
-        <div className='scroll-bar'>
-          <div className="navbar">
-            <NavbarItem item="Home" />
-            <NavbarItem item="Pengantin" />
-            <NavbarItem item="Acara" />
-            <NavbarItem item="Lokasi" />
-            <NavbarItem item="Penutup" />
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="App">
-      <div id="page-Home" className="container center bg-white">
-
-        <Floating />
-        Home
-        {apiResponse}
+      <div className="container"
+        onScroll={handleScroll}>
+        {list.map((page, index) => {
+          return (
+            <Page page={page} index={index} key={`page-${page.value}`} content={page.content}></Page>
+          )
+        })}
       </div>
-
-      <div id="page-Pengantin" className="container center bg-cream">
-        Pengantin
-      </div>
-
-      <div id="page-Acara" className="container center bg-white">
-        Acara
-      </div>
-
-      <div id="page-Lokasi" className="container center bg-cream">
-        Lokasi
-      </div>
-
-      <div id="page-Penutup" className="container center bg-white">
-        Penutup
-      </div>
+      <Navbar menu={list} page={page} setPage={setPage} />
+      <Fullscreen />
     </div>
   );
 }
