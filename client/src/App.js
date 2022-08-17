@@ -10,14 +10,14 @@ import Event from './Event'
 import Home from './Home'
 
 function App() {
-  const [apiResponse, setApiResponse] = useState('')
+  // const [apiResponse, setApiResponse] = useState('')
   const [page, setPage] = useState('home')
 
-  function callAPI() {
-    fetch("http://localhost:9000/testAPI")
-      .then(res => res.text())
-      .then(res => setApiResponse(res))
-  }
+  // function callAPI() {
+  //   fetch("http://localhost:9000/testAPI")
+  //     .then(res => res.text())
+  //     .then(res => setApiResponse(res))
+  // }
 
   const handleScroll = event => {
     console.log('scrollTop: ', event.currentTarget.scrollTop);
@@ -34,9 +34,9 @@ function App() {
     { label: 'Penutup', value: 'penutup', icon: mdiLogoutVariant },
   ]
 
-  useEffect(() => {
-    callAPI();
-  })
+  // useEffect(() => {
+  //   callAPI();
+  // })
 
   return (
     <div className="App">
