@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css';
 import Page from './Page'
 import Navbar from './components/Navbar'
-import Fullscreen from './components/Fullscreen'
+// import Fullscreen from './components/Fullscreen'
 import { mdiHomeVariantOutline, mdiMapMarkerOutline, mdiHeartMultipleOutline, mdiCalendarOutline, mdiTextBoxOutline, mdiLogoutVariant } from '@mdi/js';
 import Location from './Location'
 import Pengantin from './Pengantin'
@@ -16,8 +16,8 @@ function App() {
 
 
   const handleScroll = event => {
-    console.log('scrollTop: ', event.currentTarget.scrollTop);
-    console.log('offsetHeight: ', event.currentTarget.offsetHeight);
+    // console.log('scrollTop: ', event.currentTarget.scrollTop);
+    // console.log('offsetHeight: ', event.currentTarget.offsetHeight);
   };
 
 
