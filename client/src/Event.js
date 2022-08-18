@@ -6,13 +6,13 @@ function Event() {
     const targetDate = date.getTime();
 
     return (
-        <div className="mt-3">
+        <div>
             <div>
-                <p className="font-1 bold m-1">Akad Nikah</p>
+                <p className="font-1 bold">Akad Nikah</p>
                 <p className="font-size-1 mt-1">Pukul 10.00 - 11.30 WIB</p>
             </div>
             <div>
-                <p className="font-1 bold m-1">Walimah</p>
+                <p className="font-1 bold mt-1">Walimah</p>
                 <p className="font-size-1 mt-1">Pukul 12.30 - 14.00 WIB</p>
             </div>
             <div className="mt-1">

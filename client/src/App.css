@@ -52,7 +52,7 @@
 @media screen and (min-width: 480px) {
   .container {
     overflow: scroll;
-    min-height: calc(100vh);
+    min-height: 100vh;
     padding-bottom: 64px;
     width: auto;
     margin: auto;
@@ -77,7 +77,7 @@
 @media screen and (max-width: 480px) {
   .container {
     overflow: scroll;
-    min-height: calc(100vh);
+    min-height: 100vh;
     padding-bottom: 64px;
     width: auto;
     margin: auto;
@@ -94,7 +94,6 @@
   .scroll-bar {
     width: 100vw;
     overflow: auto;
-    background-color: #fcebdd;
     color: #685952;
   }
 }
@@ -196,7 +195,7 @@ scrollbar-width: none;  /* Firefox */
 
 .page {
   max-width: 320px;
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
 }
 
 .font-1 {

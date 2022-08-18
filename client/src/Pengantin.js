@@ -4,7 +4,7 @@ import Heart from './components/Heart'
 function Pengantin() {
     return (
         <div>
-            <img src="images/bismillah.png" alt="bismillah" className="bismillah" />
+            <img src="images/bismillah.png" alt="bismillah" className="bismillah" style={{ marginTop: '-2rem' }} />
             <p className="italic m-0">
                 Assalamu’alaikum warahmatullahi wabarakatuh
             </p>
