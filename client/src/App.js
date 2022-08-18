@@ -8,6 +8,8 @@ import Location from './Location'
 import Pengantin from './Pengantin'
 import Event from './Event'
 import Home from './Home'
+import Adab from './Adab'
+import Closing from './Closing'
 
 function App() {
   const [page, setPage] = useState('home')
@@ -24,8 +26,8 @@ function App() {
     { label: 'Pengantin', value: 'pengantin', icon: mdiHeartMultipleOutline, content: <Pengantin /> },
     { label: 'Acara', value: 'acara', icon: mdiCalendarOutline, content: <Event /> },
     { label: 'Lokasi', value: 'lokasi', icon: mdiMapMarkerOutline, content: <Location /> },
-    { label: 'Adab', value: 'adab', icon: mdiTextBoxOutline },
-    { label: 'Penutup', value: 'penutup', icon: mdiLogoutVariant },
+    { label: 'Adab', value: 'adab', icon: mdiTextBoxOutline, content: <Adab /> },
+    { label: 'Penutup', value: 'penutup', icon: mdiLogoutVariant, content: <Closing /> },
   ]
 
   return (
@@ -39,7 +41,7 @@ function App() {
         })}
       </div>
       <Navbar menu={list} page={page} setPage={setPage} />
-      <Fullscreen />
+      {/* <Fullscreen /> */}
     </div>
   );
 }

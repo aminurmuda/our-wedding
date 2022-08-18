@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=PT+Serif&display=swap');
 
 .App {
-  background: rgb(255,212,165);
-  background: linear-gradient(90deg, rgba(255,212,165,1) 0%, rgba(233,228,211,1) 51%, rgba(255,212,165,1) 100%);
+  /* background: rgb(255,212,165);
+  background: linear-gradient(90deg, rgba(255,212,165,1) 0%, rgba(233,228,211,1) 51%, rgba(255,212,165,1) 100%); */
   text-align: center;
   font-family: 'PT Serif', serif;
   font-size: 13px;
@@ -126,11 +126,15 @@ scrollbar-width: none;  /* Firefox */
   position: fixed;
   bottom: 0;
 }
-.bg-cream {
-  background-color: #f8eedf;
+.bg-soft-pink {
+  background-color: #f8e6ed;
 }
 .bg-soft-lilac {
-  background-color: #f4f0fa;
+  background-color: #e2e2f8;
+}
+
+.left {
+  text-align: left;
 }
 
 .navbar {
@@ -148,8 +152,12 @@ scrollbar-width: none;  /* Firefox */
   align-items: center;
 }
 .navbar-item.is-active {
+  /* background-color: #875070; */
+  
   color: white;
-  background-color: #875070;
+	background: linear-gradient(-45deg, #875070, #e73c7e);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
 
 .menu-label {
@@ -178,9 +186,9 @@ scrollbar-width: none;  /* Firefox */
   height: 280px;
 }
 
-.maps-link {
+.action-button {
   border-radius: 4px;
-  background-color: #875070;
+  background: linear-gradient(-45deg, #875070, #e73c7e);
   color: white;
   padding: 1rem 3rem;
   text-decoration: none;
@@ -190,6 +198,124 @@ scrollbar-width: none;  /* Firefox */
   max-width: 320px;
   min-height: 100vh;
 }
+
+.font-1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+}
+
+.font-2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid rgb(226, 189, 121)
+}
+
+.flex {
+  display: flex;
+  align-items:center;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.reverse {
+  flex-direction:row-reverse;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+.plain-text {
+  text-decoration: none;
+  color: inherit;
+}
+
+.floating-fullscreen-toggle {
+  position: fixed;
+   right: calc(50vw - 180px + 0.5em);
+   bottom: calc(64px + 1em)
+}
+
+.font-size-0-5 {
+  font-size: 12px;
+}
+
+.font-size-1 {
+  font-size: 18px;
+}
+
+.font-size-2 {
+  font-size: 24px;
+}
+
+.font-size-3 {
+  font-size: 36px;
+}
+
+.font-size-4 {
+  font-size: 48px;
+}
+
+.dark-purple {
+  color: #2B061E;
+}
+
+.white {
+  color: white;
+}
+
+.white-background-trans {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem 2.5rem;
+  margin: 2rem;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	/* height: 100vh; */
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
+
+
 
 .m-0 {
   margin: 0rem;
@@ -286,73 +412,3 @@ scrollbar-width: none;  /* Firefox */
   padding-right: 2rem;
   padding-left: 2rem;
 }
-
-.font-1 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 24px;
-}
-
-.font-2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 32px;
-}
-
-.avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 1px solid rgb(226, 189, 121)
-}
-
-.flex {
-  display: flex;
-  align-items:center;
-}
-
-.space-around {
-  justify-content: space-around;
-}
-
-.reverse {
-  flex-direction:row-reverse;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.bold {
-  font-weight: 600;
-}
-
-p {
-  margin: 0;
-}
-
-.plain-text {
-  text-decoration: none;
-  color: inherit;
-}
-
-.floating-fullscreen-toggle {
-  position: fixed;
-   right: calc(50vw - 180px + 0.5em);
-   bottom: calc(64px + 1em)
-}
-
-.font-size-1 {
-  font-size: 18px;
-}
-
-.font-size-2 {
-  font-size: 24px;
-}
-
-.font-size-3 {
-  font-size: 36px;
-}
-
-.dark-purple {
-  color: #2B061E;
-}
-

@@ -1,22 +1,24 @@
 function Home() {
     return (
-        <div className="mt-4">
+        <div className="mt-4 white">
             <div>
-                <p className="font-size-1">The Wedding of</p>
-                <div className="mt-1 mx-1 mt-4">
-                    <p className="font-2 m-0 dark-purple">
-                        Nita
-                    </p>
-                </div>
-                <p className="font-1">&</p>
-                <div className="mb-1 mx-1">
-                    <p className="font-2 m-0 dark-purple">
-                        Amin
-                    </p>
+                <p className="font-size-2">The Wedding of</p>
+                <div class="white-background-trans dark-purple mt-3">
+                    <div className="mx-1">
+                        <p className="font-size-4 font-2 m-0">
+                            Nita
+                        </p>
+                    </div>
+                    <p className="font-1">&</p>
+                    <div className="mb-1 mx-1">
+                        <p className="font-size-4 font-2 m-0">
+                            Amin
+                        </p>
+                    </div>
                 </div>
 
-                <p className="font-size-1 mt-3">Save the date</p>
-                <p className="font-size-3">22.10.22</p>
+                <p className="font-size-2">Save the date</p>
+                <p className="font-size-3 mt-1">22 . 10 . 22</p>
             </div>
         </div>
     )
