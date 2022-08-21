@@ -1,21 +1,20 @@
 
 import Icon from '@mdi/react';
 
-function Navbar(props) {
-    const { menu, page, setPage } = props
+function Navbar({ menus, currentPage, setCurrentPage }) {
 
-    const isActive = (item) => {
-        return item === page
+    const isActive = (page) => {
+        return page === currentPage
     }
 
-    const NavbarItem = (props) => {
+    const NavbarItem = ({ navbarItem }) => {
         return (
-            <div className={`navbar-item ${isActive(props.item.value) ? 'is-active' : ''}`} onClick={() => { goToPage(props.item.value) }}>
+            <div className={`navbar-item ${isActive(navbarItem.value) ? 'is-active' : ''}`} onClick={() => { goToPage(navbarItem.value) }}>
                 <div>
-                    <Icon path={props.item.icon}
+                    <Icon path={navbarItem.icon}
                         size={1} />
                     <p className="menu-label">
-                        {props.item.label}
+                        {navbarItem.label}
                     </p>
                 </div>
             </div>
@@ -23,10 +22,12 @@ function Navbar(props) {
     }
 
     const goToPage = (index) => {
-        setPage(index)
-        document.querySelector(`#page-${index}`).scrollIntoView({
+        setCurrentPage(index)
+        const currentPage = document.querySelector(`#page-${index}`)
+        currentPage.scrollIntoView({
             behavior: 'smooth'
         });
+        currentPage.scrollTop = 0;
     }
 
     return (
@@ -34,9 +35,9 @@ function Navbar(props) {
             <div className="float">
                 <div className='scroll-bar'>
                     <div className="navbar">
-                        {menu.map(item => {
+                        {menus.map(item => {
                             return (
-                                <NavbarItem key={item.value} item={item} />
+                                <NavbarItem key={item.value} navbarItem={item} />
                             )
                         })}
                     </div>

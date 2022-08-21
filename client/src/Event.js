@@ -11,7 +11,7 @@ function Event() {
     const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${text}&details=${details}&dates=${dates}&location=${location}`
 
     return (
-        <div className="pt-3">
+        <div>
             <div>
                 <p className="font-1 bold">Akad Nikah</p>
                 <p className="font-size-1 mt-1">Pukul 10.00 - 11.30 WIB</p>

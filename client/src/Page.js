@@ -1,6 +1,7 @@
 
 
-function Page({ page, index, content }) {
+function Page({ currentPage, page, index, content }) {
+    const isActive = currentPage !== page.value
     let bgColor = ''
     if (index > 0 && index % 2 === 0) {
         bgColor = 'bg-soft-lilac'
@@ -8,9 +9,11 @@ function Page({ page, index, content }) {
         bgColor = 'bg-soft-pink'
     }
     return (
-        <div id={`page-${page.value}`} className={`center ${bgColor}`}>
-            <div className="page">
-                {content}
+        <div id={`page-${page.value}`} className={`${bgColor}`} aria-hidden={isActive}>
+            <div className="center">
+                <div className="page">
+                    {content}
+                </div>
             </div>
         </div>
     )

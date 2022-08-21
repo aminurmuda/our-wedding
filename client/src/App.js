@@ -12,7 +12,7 @@ import Adab from './Adab'
 import Closing from './Closing'
 
 function App() {
-  const [page, setPage] = useState('home')
+  const [currentPage, setCurrentPage] = useState('home')
 
 
   const handleScroll = event => {
@@ -21,7 +21,7 @@ function App() {
   };
 
 
-  const list = [
+  const pages = [
     { label: 'Home', value: 'home', icon: mdiHomeVariantOutline, content: <Home /> },
     { label: 'Pengantin', value: 'pengantin', icon: mdiHeartMultipleOutline, content: <Pengantin /> },
     { label: 'Acara', value: 'acara', icon: mdiCalendarOutline, content: <Event /> },
@@ -34,13 +34,13 @@ function App() {
     <div className="App">
       <div className="container"
         onScroll={handleScroll}>
-        {list.map((page, index) => {
+        {pages.map((page, index) => {
           return (
-            <Page page={page} index={index} key={`page-${page.value}`} content={page.content}></Page>
+            <Page currentPage={currentPage} page={page} index={index} key={`page-${page.value}`} content={page.content}></Page>
           )
         })}
       </div>
-      <Navbar menu={list} page={page} setPage={setPage} />
+      <Navbar menus={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       {/* <Fullscreen /> */}
     </div>
   );

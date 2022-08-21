@@ -4,7 +4,7 @@
 function Closing() {
 
     return (
-        <div className="pt-3">
+        <div>
             <p className="bold m-1">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do’a restu kepada kami.</p>
             <p className="italic m-2 mb-1">Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir</p>
             <p className="">(QS. Ar-Ruum : 21)</p>

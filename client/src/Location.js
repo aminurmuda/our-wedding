@@ -2,7 +2,7 @@ import Icon from '@mdi/react';
 import { mdiMapCheckOutline } from '@mdi/js';
 function Location() {
     return (
-        <div className="pt-3">
+        <div>
             <div>
                 <p className="font-1 bold mb-1">Lokasi Acara</p>
                 <iframe
