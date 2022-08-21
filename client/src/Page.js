@@ -9,7 +9,7 @@ function Page({ page, index, content }) {
     }
     return (
         <div id={`page-${page.value}`} className={`center ${bgColor}`}>
-            <div className="page center">
+            <div className="page">
                 {content}
             </div>
         </div>

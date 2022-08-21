@@ -1,6 +1,6 @@
 function Home() {
     return (
-        <div className="white">
+        <div className="white mt-3">
             <div>
                 <p className="font-size-2">The Wedding of</p>
                 <div class="white-background-trans dark-purple mt-3">

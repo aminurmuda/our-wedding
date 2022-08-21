@@ -13,7 +13,7 @@ function Adab() {
     ]
 
     return (
-        <div>
+        <div className="pt-3">
             <div>
                 <p className="font-1 bold m-1">Adab Walimah</p>
             </div>
