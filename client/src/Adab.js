@@ -7,9 +7,9 @@ function Adab() {
         { id: 2, isActive: true, message: 'Gunakan Pakaian yang Sopan & Menutup Aurat', icon: mdiHanger },
         { id: 3, isActive: true, message: 'Mendoakan Pengantin', icon: mdiHandsPray },
         { id: 4, isActive: true, message: 'Perhatikan Adab Makan & Minum', icon: mdiSilverwareForkKnife },
-        { id: 4, isActive: true, message: 'Memperhatikan waktu sholat (ada masjid di dekat gedung)', icon: mdiMosqueOutline },
-        { id: 5, isActive: true, message: 'Tidak mengambil foto/video kedua mempelai tanpa izin', icon: mdiCameraOffOutline },
-        { id: 6, isActive: true, message: 'Dilarang merokok', icon: mdiSmokingOff },
+        { id: 5, isActive: true, message: 'Memperhatikan waktu sholat (ada masjid di dekat gedung)', icon: mdiMosqueOutline },
+        { id: 6, isActive: true, message: 'Tidak mengambil foto/video kedua mempelai tanpa izin', icon: mdiCameraOffOutline },
+        { id: 7, isActive: true, message: 'Dilarang merokok', icon: mdiSmokingOff },
     ]
 
     return (
@@ -17,10 +17,10 @@ function Adab() {
             <div>
                 <p className="font-1 bold m-1">Adab Walimah</p>
             </div>
-            <div class="grid-container">
+            <div className="grid-container">
                 {list.map(item => {
                     return (
-                        <div key={item.id} class="grid-item">
+                        <div key={item.id} className="grid-item">
                             {item.iconAlt ?
                                 <div><Icon size={2} path={item.icon} className="mr-0-5" /><Icon size={2} path={item.iconAlt} className="mr-0-5" /></div>
                                 :

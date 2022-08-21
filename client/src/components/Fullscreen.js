@@ -8,13 +8,13 @@ function Fullscreen() {
 
     function requestFullscreen() {
         document.documentElement.requestFullscreen();
-        console.log('set to fullscreen')
+        // console.log('set to fullscreen')
         setIsFullscreen(true)
     }
 
     function exitFullscreen() {
         document.exitFullscreen()
-        console.log('set to fullscreen')
+        // console.log('set to fullscreen')
         setIsFullscreen(false)
     }
 

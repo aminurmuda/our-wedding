@@ -3,7 +3,7 @@ function Home() {
         <div className="white mt-3">
             <div>
                 <p className="font-size-2">The Wedding of</p>
-                <div class="white-background-trans dark-purple mt-3">
+                <div className="white-background-trans dark-purple mt-3">
                     <div className="mx-1">
                         <p className="font-size-4 font-2 m-0">
                             Nita
