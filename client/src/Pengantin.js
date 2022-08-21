@@ -4,16 +4,16 @@ import Heart from './components/Heart'
 function Pengantin() {
     return (
         <div>
-            <img src="images/bismillah.png" alt="bismillah" className="bismillah" style={{ marginTop: '-2rem' }} />
+            <img src="images/bismillah.png" alt="bismillah" className="bismillah" />
             <p className="italic m-0">
                 Assalamu’alaikum warahmatullahi wabarakatuh
             </p>
             <p>
                 Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan acara pernikahan :
             </p>
-            <div className="mt-1 mx-1">
+            <div className="mt-2 mx-1">
                 <div>
-                    <img className="avatar" src="https://invetin.id/wp-content/uploads/2020/12/muslimah-10-thumb.png" alt="akhwat" />
+                    {/* <img className="avatar" src="https://invetin.id/wp-content/uploads/2020/12/muslimah-10-thumb.png" alt="akhwat" /> */}
                     <p className="font-1 m-0 dark-purple">
                         Anita Mediana (Nita)
                     </p>
@@ -27,7 +27,7 @@ function Pengantin() {
             <Heart />
             <div className="mb-1 mx-1">
                 <div>
-                    <img className="avatar" src="https://invetin.id/wp-content/uploads/2020/12/muslim-08-thumb.png" alt="ikhwan" />
+                    {/* <img className="avatar" src="https://invetin.id/wp-content/uploads/2020/12/muslim-08-thumb.png" alt="ikhwan" /> */}
                     <p className="font-1 m-0 dark-purple">
                         Aminur Muda Nasution (Amin)
                     </p>
