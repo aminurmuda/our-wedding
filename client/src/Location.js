@@ -1,3 +1,5 @@
+import Icon from '@mdi/react';
+import { mdiMapCheckOutline } from '@mdi/js';
 function Location() {
     return (
         <div>
@@ -14,11 +16,12 @@ function Location() {
             </div>
             <p className="mt-1 font-size-1 bold mb-1">Graha Sofia</p>
             <p>Jl. Otto Iskandardinata, Karanganyar, Kec. Subang, Kabupaten Subang, Jawa Barat 41215</p>
-            <div className="m-2">
-                <a className="action-button" href="https://maps.app.goo.gl/Rb9hH9uaaTzxmfQn7" target="_blank" role="button" rel="noreferrer">Buka Maps</a>
+            <div className="mt-2">
+                <a className="center action-button" href="https://maps.app.goo.gl/Rb9hH9uaaTzxmfQn7" target="_blank" role="button" rel="noreferrer"><Icon size={0.8} path={mdiMapCheckOutline} className="mr-0-5" /> Buka di Google Maps</a>
             </div>
         </div>
     )
 }
 
 export default Location
+
