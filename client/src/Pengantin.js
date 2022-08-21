@@ -9,7 +9,7 @@ function Pengantin() {
                 Assalamu’alaikum warahmatullahi wabarakatuh
             </p>
             <p>
-                Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan acara pernikahan :
+                Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaa Allah kami akan menyelenggarakan acara pernikahan antara:
             </p>
             <div className="mt-2 mx-1">
                 <div>
