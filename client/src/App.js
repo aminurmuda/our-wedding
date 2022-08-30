@@ -10,16 +10,23 @@ import Event from './Event'
 import Home from './Home'
 import Adab from './Adab'
 import Closing from './Closing'
+import Cover from './Cover'
 import BackgroundAudio from './components/BackgroundAudio';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
+  const [isOpen, setIsOpen] = useState(false)
 
 
   const handleScroll = event => {
     // console.log('scrollTop: ', event.currentTarget.scrollTop);
     // console.log('offsetHeight: ', event.currentTarget.offsetHeight);
   };
+
+  const handleClick = (page) => {
+    // setCurrentPage(page)
+    setIsOpen(true)
+  }
 
 
   const pages = [
@@ -33,17 +40,25 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container"
-        onScroll={handleScroll}>
-        {pages.map((page, index) => {
-          return (
-            <Page currentPage={currentPage} page={page} index={index} key={`page-${page.value}`} content={page.content}></Page>
-          )
-        })}
-      </div>
-      <Navbar menus={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <Fullscreen />
-      <BackgroundAudio />
+      {
+        isOpen ?
+          <>
+            <div className="container"
+              onScroll={handleScroll}>
+              {pages.map((page, index) => {
+                return (
+                  <Page currentPage={currentPage} page={page} index={index} key={`page-${page.value}`} content={page.content}></Page>
+                )
+              })}
+            </div>
+            <Navbar menus={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            <Fullscreen />
+            <BackgroundAudio />
+          </> :
+          <div className="cover bg-soft-lilac">
+            <Cover onClick={handleClick} />
+          </div>
+      }
     </div>
   );
 }

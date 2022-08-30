@@ -37,7 +37,7 @@ const BackgroundAudio = () => {
     }
 
     const Pause = () => {
-        return (<button className="round-button center" onClick={toggle}>
+        return (<button className="round-button breath center" onClick={toggle}>
             <Icon path={mdiVolumeHigh} size={1} color="black" />
         </button>)
     }

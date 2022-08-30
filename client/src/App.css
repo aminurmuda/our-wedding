@@ -75,13 +75,13 @@
   .floating-fullscreen-toggle {
     position: fixed;
     right: calc(50vw - 240px + 0.5em);
-    bottom: calc(64px + 5em)
+    bottom: calc(64px + 7em)
   }
 
   .floating-audio-toggle {
     position: fixed;
     right: calc(50vw - 240px + 0.5em);
-    bottom: calc(64px + 1em)
+    bottom: calc(64px + 2em)
   }
 
 }
@@ -111,13 +111,13 @@
   .floating-fullscreen-toggle {
     position: fixed;
     right: 1em;
-    bottom: calc(64px + 5em)
+    bottom: calc(64px + 7em)
   }
 
   .floating-audio-toggle {
     position: fixed;
     right: 1em;
-    bottom: calc(64px + 1em)
+    bottom: calc(64px + 2em)
   }
 
 }
@@ -218,6 +218,7 @@ scrollbar-width: none;  /* Firefox */
   color: white;
   padding: 1rem 3rem;
   text-decoration: none;
+  border: none;
 }
 
 .page {
@@ -432,4 +433,50 @@ body {
 .px-2 {
   padding-right: 2rem;
   padding-left: 2rem;
+}
+
+.cover {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fullheight {
+  height: 100%;
+}
+
+
+.fullwidth {
+  width: 100%;
+}
+
+.breath {
+  animation: beat 5s infinite;
+}
+
+@keyframes beat
+{
+  0%
+  {
+    transform: scale( 1.25 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( 1.25 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( 1.25 );
+  }
+  100%
+  {
+    transform: scale( 1.25 );
+  }
 }
