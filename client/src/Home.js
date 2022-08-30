@@ -4,7 +4,7 @@ function Home() {
             <div>
                 <p className="font-size-2">The Wedding of</p>
                 <div className="white-background-trans dark-purple mt-3">
-                    <div className="mx-1">
+                    <div className="mx-1 mt-2">
                         <p className="font-size-4 font-2 m-0">
                             Nita
                         </p>

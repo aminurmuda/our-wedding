@@ -71,6 +71,19 @@
     background-color: #fcebdd;
     color: #685952;
   }
+
+  .floating-fullscreen-toggle {
+    position: fixed;
+    right: calc(50vw - 240px + 0.5em);
+    bottom: calc(64px + 5em)
+  }
+
+  .floating-audio-toggle {
+    position: fixed;
+    right: calc(50vw - 240px + 0.5em);
+    bottom: calc(64px + 1em)
+  }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -94,6 +107,19 @@
     overflow: auto;
     color: #685952;
   }
+
+  .floating-fullscreen-toggle {
+    position: fixed;
+    right: 1em;
+    bottom: calc(64px + 5em)
+  }
+
+  .floating-audio-toggle {
+    position: fixed;
+    right: 1em;
+    bottom: calc(64px + 1em)
+  }
+
 }
 
 
@@ -245,12 +271,6 @@ p {
 .plain-text {
   text-decoration: none;
   color: inherit;
-}
-
-.floating-fullscreen-toggle {
-  position: fixed;
-   right: calc(50vw - 180px + 0.5em);
-   bottom: calc(64px + 1em)
 }
 
 .font-size-0-5 {

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css';
 import Page from './Page'
 import Navbar from './components/Navbar'
-// import Fullscreen from './components/Fullscreen'
+import Fullscreen from './components/Fullscreen'
 import { mdiHomeVariantOutline, mdiMapMarkerOutline, mdiHeartMultipleOutline, mdiCalendarOutline, mdiTextBoxOutline, mdiLogoutVariant } from '@mdi/js';
 import Location from './Location'
 import Pengantin from './Pengantin'
@@ -10,6 +10,7 @@ import Event from './Event'
 import Home from './Home'
 import Adab from './Adab'
 import Closing from './Closing'
+import BackgroundAudio from './components/BackgroundAudio';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -41,7 +42,8 @@ function App() {
         })}
       </div>
       <Navbar menus={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      {/* <Fullscreen /> */}
+      <Fullscreen />
+      <BackgroundAudio />
     </div>
   );
 }
