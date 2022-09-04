@@ -3,9 +3,9 @@
 function Page({ currentPage, page, index, content }) {
     const isActive = currentPage !== page.value
     let bgColor = ''
-    if (index > 0 && index % 2 === 0) {
-        bgColor = 'bg-soft-lilac'
-    } else if (index > 0 && index % 2 === 1) {
+    if (index % 2 === 0) {
+        bgColor = 'bg-soft-pink'
+    } else {
         bgColor = 'bg-soft-pink'
     }
     return (

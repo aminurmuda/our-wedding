@@ -12,25 +12,28 @@ function Event() {
 
     return (
         <div>
-            <div>
-                <p className="font-1 bold">Akad Nikah</p>
-                <p className="font-size-1 mt-1">Pukul 10.00 - 11.30 WIB</p>
-            </div>
-            <div>
-                <p className="font-1 bold mt-1">Walimah</p>
-                <p className="font-size-1 mt-1">Pukul 12.30 - 14.00 WIB</p>
+            <p className="mt-2 mb-1 slide-up">
+                Yang insyaa Allah akan diselenggarakan pada:
+            </p>
+            <div className="mt-1">
+                <p className='center font-size-1 fade-in'>Sabtu, 22 Oktober 2022</p>
             </div>
             <div className="mt-1">
-                <p className='center font-size-1'><Icon size={0.8} path={mdiCalendarOutline} className="mr-0-5" /> Sabtu, 22 Oktober 2022</p>
-                <p className="center font-size-1"><Icon size={0.8} path={mdiMapMarkerOutline} className="mr-0-5" /> di Graha Sofia</p>
+                <p className="font-1 scale-up">Akad Nikah</p>
+                <p className="font-size-1 fade-in mt-1">Pukul 10.00 - 11.30 WIB</p>
             </div>
-            <p className="mt-2 mb-1">
+            <div>
+                <p className="font-1 scale-up mt-1">Walimah</p>
+                <p className="font-size-1 fade-in mt-1">Pukul 12.30 - 14.00 WIB</p>
+            </div>
+            <p className="mt-2 mb-1 fade-in">
                 Maha Suci Allah ‘Azza wa Jalla yang menautkan dua hati dalam ikatan suci pernikahan. Semoga pernikahan ini bisa menjadi langkah awal kami untuk dapat berkumpul bersama kaum mukminin di syurga kelak. Aamiin.
             </p>
-            <p className="font-1 m-1">Hitung Mundur Acara</p>
+            <hr className="mt-2 mb-2 scale-up" />
+            <p className="font-1 scale-up m-1">Hitung Mundur Acara</p>
             <Countdown targetDate={targetDate} />
-            <div className="mt-3">
-                <a className="action-button center" target="_blank" href={url} rel="nofollow noreferrer" role="button"><Icon size={0.8} path={mdiCalendarCheckOutline} className="mr-0-5" />Simpan ke Google Calendar</a>
+            <div className="mt-2 scale-up">
+                <a className="action-button center" target="_blank" href={url} rel="nofollow noreferrer" role="button">Simpan ke Google Calendar</a>
             </div>
         </div >
 

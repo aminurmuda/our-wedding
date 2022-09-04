@@ -3,18 +3,15 @@ import { useState } from 'react'
 import Icon from '@mdi/react';
 
 
-function Fullscreen() {
-    const [isFullscreen, setIsFullscreen] = useState(false)
+function Fullscreen({ isFullscreen, setIsFullscreen }) {
 
     function requestFullscreen() {
         document.documentElement.requestFullscreen();
-        // console.log('set to fullscreen')
         setIsFullscreen(true)
     }
 
     function exitFullscreen() {
         document.exitFullscreen()
-        // console.log('set to fullscreen')
         setIsFullscreen(false)
     }
 

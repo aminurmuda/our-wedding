@@ -15,22 +15,20 @@ import BackgroundAudio from './components/BackgroundAudio';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
+  const [isFullscreen, setIsFullscreen] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 
-
-  const handleScroll = event => {
-    // console.log('scrollTop: ', event.currentTarget.scrollTop);
-    // console.log('offsetHeight: ', event.currentTarget.offsetHeight);
-  };
-
-  const handleClick = (page) => {
-    // setCurrentPage(page)
+  const closeCover = () => {
     setIsOpen(true)
+    document.documentElement.requestFullscreen();
+    setCurrentPage('home')
+    setIsFullscreen(true)
+    window.scrollTo(0, 0);
   }
 
 
   const pages = [
-    { label: 'Home', value: 'home', icon: mdiHomeVariantOutline, content: <Home /> },
+    { label: 'Pembuka', value: 'home', icon: mdiHomeVariantOutline, content: <Home /> },
     { label: 'Pengantin', value: 'pengantin', icon: mdiHeartMultipleOutline, content: <Pengantin /> },
     { label: 'Acara', value: 'acara', icon: mdiCalendarOutline, content: <Event /> },
     { label: 'Lokasi', value: 'lokasi', icon: mdiMapMarkerOutline, content: <Location /> },
@@ -40,25 +38,25 @@ function App() {
 
   return (
     <div className="App">
+      <div>
+        <div className="container">
+          {pages.map((page, index) => {
+            return (
+              <Page currentPage={currentPage} page={page} index={index} key={`page-${page.value}`} content={page.content}></Page>
+            )
+          })}
+        </div>
+        <Navbar menus={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <Fullscreen isFullscreen={isFullscreen} setIsFullscreen={setIsFullscreen} />
+        <BackgroundAudio />
+      </div>
       {
-        isOpen ?
-          <>
-            <div className="container"
-              onScroll={handleScroll}>
-              {pages.map((page, index) => {
-                return (
-                  <Page currentPage={currentPage} page={page} index={index} key={`page-${page.value}`} content={page.content}></Page>
-                )
-              })}
-            </div>
-            <Navbar menus={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-            <Fullscreen />
-            <BackgroundAudio />
-          </> :
-          <div className="cover bg-soft-lilac">
-            <Cover onClick={handleClick} />
-          </div>
+        !isOpen &&
+        <div className="cover bg-soft-lilac">
+          <Cover onClick={closeCover} />
+        </div>
       }
+
     </div>
   );
 }

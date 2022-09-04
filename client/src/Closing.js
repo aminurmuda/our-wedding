@@ -1,18 +1,18 @@
-
-
-
 function Closing() {
 
     return (
         <div>
-            <p className="bold m-1">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do’a restu kepada kami.</p>
-            <p className="italic m-2 mb-1">Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir</p>
-            <p className="">(QS. Ar-Ruum : 21)</p>
-            <p className="bold mt-2">Wassalamu’alaikum warahmatullahi wabarakatuh</p>
-            <p className="bold">Kami yang berbahagia,</p>
-            <p className="font-2 mt-1">Nita <span className="font-size-2">&</span> Amin</p>
-            <p className="font-size-0-5 mt-1">Keluarga Bapak Diman & Ibu Yasinah</p>
-            <p className="font-size-0-5 mt-0-5">Keluarga Bapak Aris & Ibu Jean </p>
+            <p className="slide-up">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do’a restu kepada kami.</p>
+            <p className="slide-up">Wassalamu’alaikum warahmatullahi wabarakatuh</p>
+            <p className="font-size-0-5 mt-2 slide-up">Kami yang berbahagia,</p>
+            <p className="font-1 mt-1 scale-up">Nita <span className="font-size-2">&</span> Amin</p>
+            <p className="font-size-0-5 mt-1 slide-up">Keluarga Bapak Diman & Ibu Yasinah</p>
+            <p className="font-size-0-5 slide-up">Keluarga Bapak Aris & Ibu Jean </p>
+            <hr className="mt-2 mb-2 scale-up" />
+            <p className="font-1 scale-up">Doa Untuk Pengantin</p>
+            <h2 className="m-2 slide-down">بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</h2>
+            <p className="fade-in">Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di waktu susah, serta semoga Allah mempersatukan kalian berdua dalam kebaikan</p>
+            <p className="mt-0-5 slide-down">(HR. Abu Dawud)</p>
         </div>
     )
 }

@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=PT+Serif&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=PT+Serif&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=PT+Serif&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=PT+Serif&family=Pacifico&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dancing+Script:wght@700&family=Great+Vibes&family=PT+Serif&family=Pacifico&display=swap');
 
 .App {
   /* background: rgb(255,212,165);
@@ -214,7 +217,7 @@ scrollbar-width: none;  /* Firefox */
 
 .action-button {
   border-radius: 4px;
-  background: linear-gradient(-45deg, #875070, #e73c7e);
+  background: linear-gradient(135deg, #875070 0%, #875070 30%, #e73c7e 100%);
   color: white;
   padding: 1rem 3rem;
   text-decoration: none;
@@ -222,19 +225,14 @@ scrollbar-width: none;  /* Firefox */
 }
 
 .page {
-  padding: 3rem 0;
+  padding-top: 2rem;
   max-width: 320px;
-  min-height: calc(100vh - 64px);
+  min-height: 100vh
 }
 
 .font-1 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Berkshire Swash', cursive;
   font-size: 24px;
-}
-
-.font-2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 32px;
 }
 
 .avatar {
@@ -428,6 +426,9 @@ body {
 .mb-1 {
   margin-bottom: 1rem;
 }
+.mb-2 {
+  margin-bottom: 2rem;
+}
 
 
 .px-2 {
@@ -438,6 +439,9 @@ body {
 .cover {
   width: 100vw;
   height: 100vh;
+  position: fixed;
+  z-index: 5;
+  top: 0;
 }
 
 .fullheight {
@@ -449,34 +453,288 @@ body {
   width: 100%;
 }
 
-.breath {
-  animation: beat 5s infinite;
+.beat {
+  animation: beat 1s infinite;
 }
 
 @keyframes beat
 {
   0%
   {
-    transform: scale( 1.25 );
+    transform: scale( 1.1 );
   }
-  20%
+  50%
   {
-    transform: scale( 1 );
-  }
-  40%
-  {
-    transform: scale( 1.25 );
-  }
-  60%
-  {
-    transform: scale( 1 );
-  }
-  80%
-  {
-    transform: scale( 1.25 );
+    transform: scale( 0.9 );
   }
   100%
   {
-    transform: scale( 1.25 );
+    transform: scale( 1.1 );
+  }
+}
+
+.slide-down {
+  animation: slideDown 1s;
+  -webkit-animation: slideDown 1s;
+  -moz-animation: slideDown 1s;
+  -o-animation: slideDown 1s;
+  -ms-animation: slideDown 1s;
+}
+
+@keyframes slideDown {
+  0% { 
+    transform: translateY(-2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes slideDown {
+  0% { 
+    transform: translateY(-2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% { 
+    transform: translateY(-2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+@-o-keyframes slideDown {
+  0% { 
+    transform: translateY(-2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+@-ms-keyframes slideDown {
+  0% { 
+    transform: translateY(-2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s;
+  -webkit-animation: slideUp 1s;
+  -moz-animation: slideUp 1s;
+  -o-animation: slideUp 1s;
+  -ms-animation: slideUp 1s;
+}
+
+@keyframes slideUp {
+  0% { 
+    transform: translateY(2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes slideUp {
+  0% { 
+    transform: translateY(2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% { 
+    transform: translateY(2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+@-o-keyframes slideUp {
+  0% { 
+    transform: translateY(2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+@-ms-keyframes slideUp {
+  0% { 
+    transform: translateY(2rem);
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+
+.scale-up {
+  animation: scaleUp 1s;
+  -webkit-animation: scaleUp 1s;
+  -moz-animation: scaleUp 1s;
+  -o-animation: scaleUp 1s;
+  -ms-animation: scaleUp 1s;
+}
+
+@keyframes scaleUp {
+  0% { 
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes scaleUp {
+  0% { 
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scaleUp {
+  0% { 
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes scaleUp {
+  0% { 
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes scaleUp {
+  0% { 
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { 
+    opacity: 0;
+    transform: translateY(-1rem)
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) 
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% { 
+    opacity: 0;
+    transform: translateY(-1rem)
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) 
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { 
+    opacity: 0;
+    transform: translateY(-1rem)
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) 
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% { 
+    opacity: 0;
+    transform: translateY(-1rem)
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) 
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% { 
+    opacity: 0;
+    transform: translateY(-1rem)
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) 
+  }
+}
+
+.shine {
+  width: 100%;
+  position: relative;
+  letter-spacing: 3px;
+  font-size: 24px;
+  text-align: center;
+  font: 900 10vw 'Berkshire Swash', sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shine:after {
+  content: "Nita & Amin";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(43,6,30,1) 0%, rgba(43,6,30,1) 35%, rgb(145, 125, 137) 50%, rgba(43,6,30,1) 65%, rgba(43,6,30,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: shine 7s infinite;
+}
+
+@keyframes shine{
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
   }
 }

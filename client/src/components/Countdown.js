@@ -13,7 +13,7 @@ const ExpiredNotice = () => {
 
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
     return (
-        <div className="show-counter">
+        <div className="show-counter scale-up">
             <div className='center'
             >
                 <DateTimeDisplay value={days} type={'Hari'} isDanger={days <= 3} />

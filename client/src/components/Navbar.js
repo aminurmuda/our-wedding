@@ -11,7 +11,7 @@ function Navbar({ menus, currentPage, setCurrentPage }) {
         return (
             <div className={`navbar-item ${isActive(navbarItem.value) ? 'is-active' : ''}`} onClick={() => { goToPage(navbarItem.value) }}>
                 <div>
-                    <Icon path={navbarItem.icon}
+                    <Icon path={navbarItem.icon} className={`${isActive(navbarItem.value) ? 'scale-up' : ''}`}
                         size={1} />
                     <p className="menu-label">
                         {navbarItem.label}
@@ -28,6 +28,7 @@ function Navbar({ menus, currentPage, setCurrentPage }) {
             behavior: 'smooth'
         });
         currentPage.scrollTop = 0;
+        window.scrollTo(0, 0);
     }
 
     return (
