@@ -1,5 +1,3 @@
-import Icon from '@mdi/react';
-import { mdiMapMarkerOutline, mdiCalendarOutline, mdiCalendarCheckOutline } from '@mdi/js';
 import Countdown from './components/Countdown';
 function Event() {
     const date = new Date('10/22/2022, 10:00:00 AM')
