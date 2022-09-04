@@ -22,7 +22,7 @@ function Pengantin() {
                     <Icon size={0.8} path={mdiInstagram} /><span className='ml-0-5'> medianasutamenggala</span>
                 </a> */}
 
-                <p className="mt-0-5 slide-up">Putri dari Bapak Diman Kadiman dan Ibu Yasinah (rahimahullah) </p>
+                <p className="mt-0-5 slide-down">Putri dari Bapak Diman Kadiman dan Ibu Yasinah (rahimahullah) </p>
             </div>
             <Heart />
             <div className="mb-1 mx-1">

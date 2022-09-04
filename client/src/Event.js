@@ -14,15 +14,15 @@ function Event() {
                 Yang insyaa Allah akan diselenggarakan pada:
             </p>
             <div className="mt-1">
-                <p className='center font-size-1 fade-in'>Sabtu, 22 Oktober 2022</p>
+                <p className='center font-size-1 slide-up'>Sabtu, 22 Oktober 2022</p>
             </div>
             <div className="mt-1">
                 <p className="font-1 scale-up">Akad Nikah</p>
-                <p className="font-size-1 fade-in mt-1">Pukul 10.00 - 11.30 WIB</p>
+                <p className="font-size-1 slide-up mt-1">Pukul 10.00 - 11.30 WIB</p>
             </div>
             <div>
                 <p className="font-1 scale-up mt-1">Walimah</p>
-                <p className="font-size-1 fade-in mt-1">Pukul 12.30 - 14.00 WIB</p>
+                <p className="font-size-1 slide-up mt-1">Pukul 12.30 - 14.00 WIB</p>
             </div>
             <p className="mt-2 mb-1 fade-in">
                 Maha Suci Allah ‘Azza wa Jalla yang menautkan dua hati dalam ikatan suci pernikahan. Semoga pernikahan ini bisa menjadi langkah awal kami untuk dapat berkumpul bersama kaum mukminin di syurga kelak. Aamiin.

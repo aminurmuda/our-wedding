@@ -28,7 +28,6 @@ function Navbar({ menus, currentPage, setCurrentPage }) {
             behavior: 'smooth'
         });
         currentPage.scrollTop = 0;
-        window.scrollTo(0, 0);
     }
 
     return (
